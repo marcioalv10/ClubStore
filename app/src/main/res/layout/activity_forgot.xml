@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/dark_black"
+    tools:context=".ui.activities.ForgotActivity"
     android:orientation="vertical"
-    tools:context=".ui.activities.RegisterActivity">
+    >
 
     <TextView
         android:layout_width="120dp"
@@ -34,21 +34,20 @@
         android:textColor="@color/blue_logo"
         android:textSize="42sp" />
 
-    <EditText
-        android:id="@+id/nome"
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginHorizontal="22dp"
-        android:layout_marginTop="45dp"
-        android:backgroundTint="@color/blue_light"
-        android:fontFamily="@font/open_sans_regular"
-        android:hint="@string/nome"
-        android:inputType="text"
-        android:textColor="@color/dark_white"
-        android:textColorHint="@color/dark_white"
-        android:textSize="15sp"
-
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_gravity="center"
+        android:text="Redefinir senha"
+        android:textSize="26sp"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:fontFamily="@font/rubik_medium"
         />
+
+
+
 
     <EditText
         android:id="@+id/email"
@@ -66,44 +65,18 @@
 
         />
 
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginHorizontal="22dp"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/open_sans_regular"
-        android:hint="Senha"
-        android:inputType="textPassword"
-        android:backgroundTint="@color/blue_light"
-        android:textColor="@color/dark_white"
-        android:textColorHint="@color/dark_white"
 
-        android:textSize="15sp" />
-
-    <CheckBox
-        android:id="@+id/adesao"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginHorizontal="21dp"
-        android:layout_marginTop="5dp"
-        android:buttonTint="@color/white"
-        android:textColorHint="@color/white"
-        android:paddingLeft="10dp"
-        android:text="Estou ciente dos termos da politica de privacidade do App, de acordo com a LGPD."
-        android:textColor="@color/twilight" />
 
 
     <Button
-        android:id="@+id/register"
+        android:id="@+id/sendPassword"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_marginHorizontal="60dp"
         android:layout_marginTop="30dp"
         android:background="@drawable/button_gradiente"
         android:fontFamily="@font/rubik_medium"
-        android:text="Criar Conta"
+        android:text="Enviar Nova Senha"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/white"

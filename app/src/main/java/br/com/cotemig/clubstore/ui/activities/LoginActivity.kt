@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import br.com.cotemig.clubstore.R
 
 class LoginActivity : AppCompatActivity() {
@@ -18,6 +19,11 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        var remember = findViewById<TextView>(R.id.remenberPassword)
+        remember.setOnClickListener {
+            var intent = Intent(this, ForgotActivity::class.java)
+            startActivity(intent)
+        }
 
 
 

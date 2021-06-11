@@ -41,10 +41,10 @@
         android:layout_gravity="center"
         android:text="Redefinir senha"
         android:textSize="26sp"
-        android:textColor="@color/white"
+        android:textColor="@color/dark_white"
         android:textAlignment="center"
         android:fontFamily="@font/rubik_medium"
-        />
+        />  
 
 
 

@@ -43,9 +43,10 @@
         android:fontFamily="@font/open_sans_regular"
         android:hint="@string/email"
         android:inputType="textEmailAddress"
-        android:textColor="@color/black"
-        android:textColorHint="@color/gray_70"
+        android:textColor="@color/dark_white"
+        android:textColorHint="@color/dark_white"
         android:textSize="15sp"
+        android:backgroundTint="@color/blue_light"
 
         />
 
@@ -58,9 +59,9 @@
         android:fontFamily="@font/open_sans_regular"
         android:hint="Senha"
         android:inputType="textPassword"
-        android:textColor="@color/black"
-        android:textColorHint="@color/gray_70"
-
+        android:textColor="@color/dark_white"
+        android:textColorHint="@color/dark_white"
+        android:backgroundTint="@color/blue_light"
         android:textSize="15sp" />
 
         <TextView
@@ -79,7 +80,7 @@
         android:layout_height="56dp"
         android:layout_marginHorizontal="60dp"
         android:layout_marginTop="73dp"
-        android:background="@drawable/button_gradiente_green"
+        android:background="@drawable/button_gradiente_green_dark"
         android:fontFamily="@font/rubik_medium"
         android:text="Login"
         android:textAllCaps="false"

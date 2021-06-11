@@ -4,21 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.activities.RegisterActivity"
-    android:orientation="vertical">
+    android:background="@color/dark_black"
+    android:orientation="vertical"
+    tools:context=".ui.activities.RegisterActivity">
 
     <TextView
         android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="75dp"
-        android:fontFamily="@font/rubik_medium"
-        android:text="Club"
-
-        android:textAlignment="center"
-        android:padding="2dp"
-        android:background="@drawable/background_logo"
-        android:layout_marginRight="15dp"
         android:layout_gravity="center"
+        android:layout_marginTop="75dp"
+        android:layout_marginRight="15dp"
+
+        android:background="@drawable/background_logo"
+        android:fontFamily="@font/rubik_medium"
+        android:padding="2dp"
+        android:text="Club"
+        android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="42sp" />
 
@@ -39,14 +40,16 @@
         android:layout_height="50dp"
         android:layout_marginHorizontal="22dp"
         android:layout_marginTop="45dp"
+        android:backgroundTint="@color/blue_light"
         android:fontFamily="@font/open_sans_regular"
         android:hint="@string/nome"
         android:inputType="text"
-        android:textColor="@color/black"
-        android:textColorHint="@color/gray_70"
+        android:textColor="@color/dark_white"
+        android:textColorHint="@color/dark_white"
         android:textSize="15sp"
 
         />
+
     <EditText
         android:id="@+id/email"
         android:layout_width="match_parent"
@@ -56,8 +59,9 @@
         android:fontFamily="@font/open_sans_regular"
         android:hint="@string/email"
         android:inputType="textEmailAddress"
-        android:textColor="@color/black"
-        android:textColorHint="@color/gray_70"
+        android:backgroundTint="@color/blue_light"
+        android:textColor="@color/dark_white"
+        android:textColorHint="@color/dark_white"
         android:textSize="15sp"
 
         />
@@ -71,8 +75,9 @@
         android:fontFamily="@font/open_sans_regular"
         android:hint="Senha"
         android:inputType="textPassword"
-        android:textColor="@color/black"
-        android:textColorHint="@color/gray_70"
+        android:backgroundTint="@color/blue_light"
+        android:textColor="@color/dark_white"
+        android:textColorHint="@color/dark_white"
 
         android:textSize="15sp" />
 
@@ -80,13 +85,13 @@
         android:id="@+id/adesao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="21dp"
-        android:text="Estou ciente dos termos da politica de privacidade do App, de acordo com a LGPD."
         android:layout_gravity="center"
-        android:textColor="@color/twilight"
+        android:layout_marginHorizontal="21dp"
         android:layout_marginTop="5dp"
-        />
-
+        android:buttonTint="@color/white"
+        android:textColorHint="@color/white"
+        android:text="Estou ciente dos termos da politica de privacidade do App, de acordo com a LGPD."
+        android:textColor="@color/twilight" />
 
 
     <Button

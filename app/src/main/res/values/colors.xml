@@ -19,5 +19,12 @@
     <color name="gray_cf">#cfcfcf</color>
     <color name="blue_logo">#376AED</color>
 
+    <color name="dark_black">#020818</color>
+    <color name="dark_white">#f4f4f4</color>
+    <color name="dark_vine">#754064</color>
+    <color name="dark_green">#227722</color>
+    <color name="dark_turquesa">#40e0d0</color>
+
+    <color name="dark_turquesa_end">#21b1b8</color>
 
 </resources>

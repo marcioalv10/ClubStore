@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".ui.activities.LoginActivity">
-
+    tools:context=".ui.activities.RegisterActivity"
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="120dp"
@@ -19,7 +18,7 @@
         android:padding="2dp"
         android:background="@drawable/background_logo"
         android:layout_marginRight="15dp"
-       android:layout_gravity="center"
+        android:layout_gravity="center"
         android:textColor="@color/white"
         android:textSize="42sp" />
 
@@ -35,11 +34,25 @@
         android:textSize="42sp" />
 
     <EditText
-        android:id="@+id/email"
+        android:id="@+id/nome"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginHorizontal="22dp"
         android:layout_marginTop="45dp"
+        android:fontFamily="@font/open_sans_regular"
+        android:hint="@string/nome"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray_70"
+        android:textSize="15sp"
+
+        />
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="22dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/open_sans_regular"
         android:hint="@string/email"
         android:inputType="textEmailAddress"
@@ -63,38 +76,28 @@
 
         android:textSize="15sp" />
 
-        <TextView
-            android:id="@+id/remenberPassword"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Esqueci minha senha"
-            android:layout_gravity="center"
-            android:textColor="@color/twilight"
-            android:layout_marginTop="5dp"
-            />
+    <CheckBox
+        android:id="@+id/adesao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="21dp"
+        android:text="Estou ciente dos termos da politica de privacidade do App, de acordo com a LGPD."
+        android:layout_gravity="center"
+        android:textColor="@color/twilight"
+        android:layout_marginTop="5dp"
+        />
+
+
 
     <Button
-        android:id="@+id/login"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:layout_marginHorizontal="60dp"
-        android:layout_marginTop="73dp"
-        android:background="@drawable/button_gradiente_green"
-        android:fontFamily="@font/rubik_medium"
-        android:text="Login"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="15sp" />
-
-    <Button
-        android:id="@+id/signup"
+        android:id="@+id/register"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_marginHorizontal="60dp"
         android:layout_marginTop="30dp"
         android:background="@drawable/button_gradiente"
         android:fontFamily="@font/rubik_medium"
-        android:text="Cadastrar"
+        android:text="Criar Conta"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/white"

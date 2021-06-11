@@ -42,4 +42,14 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    // biblioteca do retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    // biblioteca do conversor gson
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    // para criação de box de mensagens no formato do Material Design
+    implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
+
+
 }

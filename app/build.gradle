@@ -51,5 +51,10 @@ dependencies {
     // para criação de box de mensagens no formato do Material Design
     implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
 
+    //Dependência do Coil
+    implementation 'io.coil-kt:coil:1.2.1'
+
+    // adicionando Recyclerview no projeto
+    implementation 'com.android.support:recyclerview-v7:30.0.0'
 
 }

@@ -2,4 +2,25 @@
     <string name="app_name">Club Store</string>
     <string name="email">E-mail</string>
     <string name="nome">Nome</string>
+
+    <string name="message_ops">Ops</string>
+    <string name="generic_error">Algo aconteceu de errado, tente novamente mais tarde</string>
+    <string name="button_ok">ok</string>
+
+    <string name="sucess">Sucesso</string>
+    <string name="success_message">Usuário criado com sucesso!</string>
+    <string name="insuccess_message">Não foi possivel criar usuario!</string>
+
+    <string name="button_yes">Sim</string>
+    <string name="button_no">Não</string>
+    <string name="user_reset_message">Usuário já existe! Deseja redefinir sua senha?</string>
+
+    <string name="senha_redefinida">Senha enviada por email</string>
+    <string name="usuario_inexistente">Usuario não existe</string>
+    <string name="preencha_campos">Todos os campos devem ser preenchidos</string>
+    <string name="preencha_email">O email deve ser preenchido</string>
+    <string name="reset_senha">Senha resetada</string>
+    <string name="check_lgpd">Confirme caso esteja ciente sobre a nossa Política de Privacidade</string>
+    <string name="confirme_email">Confirme o seu email</string>
+
 </resources>

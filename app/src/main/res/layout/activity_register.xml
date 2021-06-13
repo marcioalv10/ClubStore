@@ -35,7 +35,7 @@
         android:textSize="42sp" />
 
     <EditText
-        android:id="@+id/nome"
+        android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginHorizontal="22dp"
@@ -91,6 +91,7 @@
         android:buttonTint="@color/white"
         android:textColorHint="@color/white"
         android:paddingLeft="10dp"
+        android:checked="false"
         android:text="Estou ciente dos termos da politica de privacidade do App, de acordo com a LGPD."
         android:textColor="@color/twilight" />
 

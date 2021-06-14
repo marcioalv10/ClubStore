@@ -18,21 +18,15 @@ class StoreDetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_store_detail)
 
-    // var store = intent.getSerializableExtra("Detail") as Store
+        // var store = intent.getSerializableExtra("Detail") as Store
 
         var store = intent.getSerializableExtra("store") as Store
 
-
-
-
-   /*     var nomeLoja = intent.getStringExtra("nomeLoja")
-        var localLoja = intent.getStringExtra("localLoja")
-        var imageLoja = intent.getStringExtra("imageLoja")
-        var descLoja = intent.getStringExtra("descLoja")
-        var produtosLoja = intent.getStringExtra("produtosLoja")*/
-
-
-
+        /*   var nomeLoja = intent.getStringExtra("nomeLoja")
+             var localLoja = intent.getStringExtra("localLoja")
+             var imageLoja = intent.getStringExtra("imageLoja")
+             var descLoja = intent.getStringExtra("descLoja")
+             var produtosLoja = intent.getStringExtra("produtosLoja")*/
 
         //Toast.makeText(this, store.localizacao, Toast.LENGTH_SHORT).show()
 
@@ -50,10 +44,9 @@ class StoreDetailActivity : AppCompatActivity() {
         enderecoStore.text = store.localizacao
 
         var logo_detail = findViewById<ImageView>(R.id.logo_detail)
-        logo_detail.load(store.logo){
+        logo_detail.load(store.logo) {
             transformations(RoundedCornersTransformation(60f))
         }
-
 
         /* var produto = view.findViewById<RecyclerView>(R.id.lista_produtos)
            produto.adapter = ProductAdapter(context, store.produtos)

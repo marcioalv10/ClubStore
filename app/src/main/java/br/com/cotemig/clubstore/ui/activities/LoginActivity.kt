@@ -33,16 +33,16 @@ class LoginActivity : AppCompatActivity() {
         var remember = findViewById<TextView>(R.id.remenberPassword)
         remember.setOnClickListener {
             var intent = Intent(this, ForgotActivity::class.java)
-            intent.putExtra("email", email.text.toString() )
+            intent.putExtra("email", email.text.toString())
             startActivity(intent)
         }
 
         var login = findViewById<Button>(R.id.login)
         login.setOnClickListener {
 
-            if(!email.text.toString().isEmpty()){
+            if (!email.text.toString().isEmpty()) {
                 authPassword(email.text.toString(), password.text.toString())
-            }else{
+            } else {
                 MaterialDialog.Builder(this@LoginActivity)
                     .theme(Theme.LIGHT)
                     .title(R.string.message_ops)
@@ -51,17 +51,13 @@ class LoginActivity : AppCompatActivity() {
             }
 
 
-
-
-
         }
-
 
 
     }
 
     //TODO: criar o método para autenticar o usuário
-    fun authPassword(email: String , password: String){
+    fun authPassword(email: String, password: String) {
 
         Log.i("Chave", "teste")
 
@@ -75,10 +71,10 @@ class LoginActivity : AppCompatActivity() {
         var nome: String
         nome = account.name
 
-       Log.i("Chave", account.name)
+        Log.i("Chave", account.name)
         Log.i("Chave", "teste2")
 
-        call.enqueue(object : retrofit2.Callback<Account>{
+        call.enqueue(object : retrofit2.Callback<Account> {
             override fun onFailure(call: Call<Account>, t: Throwable) {
                 MaterialDialog.Builder(this@LoginActivity)
                     .theme(Theme.LIGHT)
@@ -86,20 +82,19 @@ class LoginActivity : AppCompatActivity() {
                     .content("o conteudo não foi exibido")
                     .positiveText(R.string.button_ok).show()
 
-
             }
 
             override fun onResponse(call: Call<Account>, response: Response<Account>) {
 
-                if(response.code() == 200){
+                if (response.code() == 200) {
                     var intent = Intent(this@LoginActivity, HomeActivity::class.java)
                     intent.putExtra("name", nome)
                     Log.i("Chave", nome)
-                   startActivity(intent)
+                    startActivity(intent)
                     finish()
                 }
 
-                if(response.code() == 403){
+                if (response.code() == 403) {
                     MaterialDialog.Builder(this@LoginActivity)
                         .theme(Theme.LIGHT)
                         .title(R.string.message_ops)

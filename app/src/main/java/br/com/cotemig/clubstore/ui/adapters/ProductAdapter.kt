@@ -14,8 +14,8 @@ import coil.transform.RoundedCornersTransformation
 import java.text.NumberFormat
 import java.util.*
 
-class ProductAdapter(var context: Context, var product: List<Produto>):
-        RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class ProductAdapter(var context: Context, var product: List<Produto>) :
+    RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
 
         var view = LayoutInflater.from(context).inflate(R.layout.item_produto, parent, false)
@@ -25,20 +25,20 @@ class ProductAdapter(var context: Context, var product: List<Produto>):
     }
 
     override fun getItemCount(): Int {
-       return product.size
+        return product.size
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         (holder as ProdutoHolder).bind(product[position])
     }
 
-    class  ProdutoHolder(var view: View): RecyclerView.ViewHolder(view){
-        fun bind(produto: Produto){
+    class ProdutoHolder(var view: View) : RecyclerView.ViewHolder(view) {
+        fun bind(produto: Produto) {
             var nameProduto = view.findViewById<TextView>(R.id.nameProduto)
             nameProduto.text = produto.item
 
             var imageProduto = view.findViewById<ImageView>(R.id.imageProduto)
-            imageProduto.load(produto.image){
+            imageProduto.load(produto.image) {
                 transformations(RoundedCornersTransformation(15f))
             }
 

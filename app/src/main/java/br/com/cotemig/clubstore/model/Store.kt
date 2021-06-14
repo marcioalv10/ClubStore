@@ -4,24 +4,7 @@ import android.os.Parcelable
 import androidx.versionedparcelable.VersionedParcelize
 import java.io.Serializable
 
-
-
-
-
-/*
-data class Store (
-    var nome: String = "",
-    var tipo: String = "",
-    var descricao: String = "",
-    var localizacao: String = "",
-   var produtos: List<Produto> = emptyList()
-
-): Serializable
-*/
-
-
-
-data class Store (
+data class Store(
     var nome: String = "",
     var tipo: String = "",
     var descricao: String = "",
@@ -30,20 +13,8 @@ data class Store (
     var logo: String = "",
     var produtos: List<Produto> = emptyList()
 
-): Serializable
+) : Serializable
 
-
-
-/*
-data class Store (
-    var nome: String = "",
-    var tipo: String = "",
-    var descricao: String = "",
-    var localizacao: String = "",
-   var produtos: List<Produto> = emptyList()
-
-)
-*/
 
 /*
 class Store {

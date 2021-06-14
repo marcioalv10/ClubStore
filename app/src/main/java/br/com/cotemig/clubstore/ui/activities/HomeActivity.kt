@@ -29,20 +29,19 @@ class HomeActivity : AppCompatActivity() {
         getStores()
 
 
-
     }
 
-    fun getStores(){
+    fun getStores() {
         var s = RetrofitInitializer().serviceStore()
         var call = s.getStores()
 
-        call.enqueue(object : retrofit2.Callback<List<Store>>{
+        call.enqueue(object : retrofit2.Callback<List<Store>> {
             override fun onFailure(call: Call<List<Store>>, t: Throwable) {
-               Toast.makeText(this@HomeActivity, "Ops", Toast.LENGTH_LONG).show()
+                Toast.makeText(this@HomeActivity, "Ops", Toast.LENGTH_LONG).show()
             }
 
             override fun onResponse(call: Call<List<Store>>, response: Response<List<Store>>) {
-                if(response.code() == 200){
+                if (response.code() == 200) {
                     response.body()?.let {
                         showStore(it)
                     }
@@ -54,9 +53,10 @@ class HomeActivity : AppCompatActivity() {
 
     }
 
-    fun showStore(list: List<Store>){
+    fun showStore(list: List<Store>) {
         var recyclerViewStore = findViewById<RecyclerView>(R.id.recyclerViewStore)
         recyclerViewStore.adapter = StoreAdapter(this, list)
-        recyclerViewStore.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        recyclerViewStore.layoutManager =
+            LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
     }
 }

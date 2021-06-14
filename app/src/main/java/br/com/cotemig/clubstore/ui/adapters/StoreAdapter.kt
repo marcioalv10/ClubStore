@@ -18,10 +18,9 @@ import coil.load
 import coil.transform.RoundedCornersTransformation
 import java.io.Serializable
 
-class StoreAdapter (var context: Context, var list: List<Store>):
-                RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class StoreAdapter(var context: Context, var list: List<Store>) :
+    RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-
 
 
         var view = LayoutInflater.from(context).inflate(R.layout.item_store, parent, false)
@@ -41,9 +40,9 @@ class StoreAdapter (var context: Context, var list: List<Store>):
     }
 
 
-    class StoreHolder(var view: View): RecyclerView.ViewHolder(view){
+    class StoreHolder(var view: View) : RecyclerView.ViewHolder(view) {
 
-        fun bind(context: Context, store: Store){
+        fun bind(context: Context, store: Store) {
 /*
 
             if(store.tipo.equals("Oficina")){
@@ -52,33 +51,25 @@ class StoreAdapter (var context: Context, var list: List<Store>):
 */
             var content = view.findViewById<RelativeLayout>(R.id.content_item_store)
             content.setOnClickListener {
-                Toast.makeText(context, "Clicou ".plus(store.nome), Toast.LENGTH_LONG).show()
+                //Toast.makeText(context, "Clicou ".plus(store.nome), Toast.LENGTH_LONG).show()
 
                 //Abrindo a activity Detail Store
                 var intent = Intent(context, StoreDetailActivity::class.java)
                 intent.putExtra("store", store)
 
-
-
-             /*  intent.putExtra("nomeLoja", store.nome)
-                intent.putExtra("localLoja", store.localizacao)
-                intent.putExtra("imageLoja", store.tipo)
-                intent.putExtra("descLoja", store.descricao)
-                intent.putExtra("produtosLoja", store.produtos.toString())*/
-
-
+                /* intent.putExtra("nomeLoja", store.nome)
+                   intent.putExtra("localLoja", store.localizacao)
+                   intent.putExtra("imageLoja", store.tipo)
+                   intent.putExtra("descLoja", store.descricao)
+                   intent.putExtra("produtosLoja", store.produtos.toString())*/
 
                 context.startActivity(intent)
 
             }
 
-
-
-
             /* var produto = view.findViewById<RecyclerView>(R.id.lista_produtos)
             produto.adapter = ProductAdapter(context, store.produtos)
             produto.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)*/
-
 
 
             var name_store = view.findViewById<TextView>(R.id.name_store)
@@ -91,28 +82,26 @@ class StoreAdapter (var context: Context, var list: List<Store>):
             localizacao_store.text = store.localizacao
 
             var image_cat = view.findViewById<ImageView>(R.id.image_category)
-            var categoria : String
+            var categoria: String
 
             var foto = view.findViewById<ImageView>(R.id.imageStore)
-            foto.load(store.foto){
+            foto.load(store.foto) {
                 transformations(RoundedCornersTransformation(15f))
             }
 
             var logo = view.findViewById<ImageView>(R.id.image_logo)
-            logo.load(store.logo){
+            logo.load(store.logo) {
                 transformations(RoundedCornersTransformation(50f))
             }
 
 
-
-
-            if(store.tipo.equals("Alimentacao")){
+            if (store.tipo.equals("Alimentacao")) {
                 categoria = "https://mockup.fluo.app/assets/fatura/alimentacao.png"
-            }else if(store.tipo.equals("Oficina")){
+            } else if (store.tipo.equals("Oficina")) {
                 categoria = "https://mockup.fluo.app/assets/fatura/servicos.png"
-            }else if(store.tipo.equals("Educacao")){
+            } else if (store.tipo.equals("Educacao")) {
                 categoria = "https://mockup.fluo.app/assets/fatura/educacao.png"
-            }else{
+            } else {
                 categoria = "https://mockup.fluo.app/assets/fatura/outros.png"
             }
 

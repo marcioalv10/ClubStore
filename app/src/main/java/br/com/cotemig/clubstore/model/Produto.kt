@@ -4,12 +4,9 @@ import java.io.Serializable
 
 /*
 class Produto {
-
     var item: String = ""
     var image: String = ""
-
 }*/
-
 
 data class Produto (
 

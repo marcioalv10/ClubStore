@@ -26,9 +26,9 @@ class ForgotActivity : AppCompatActivity() {
         var sendPassword = findViewById<Button>(R.id.sendPassword)
         sendPassword.setOnClickListener {
 
-            if(!email.text.toString().isEmpty()){
+            if (!email.text.toString().isEmpty()) {
                 sendPassword(email.text.toString())
-            }else{
+            } else {
                 MaterialDialog.Builder(this@ForgotActivity)
                     .theme(Theme.LIGHT)
                     .title(R.string.message_ops)
@@ -40,14 +40,14 @@ class ForgotActivity : AppCompatActivity() {
 
     }
 
-    fun sendPassword(email : String){
+    fun sendPassword(email: String) {
         var account = Account()
         account.email = email
 
         var s = RetrofitInitializer().serviceAccount()
         var call = s.forgot(account)
 
-        call.enqueue(object : retrofit2.Callback<Void>{
+        call.enqueue(object : retrofit2.Callback<Void> {
             override fun onFailure(call: Call<Void>, t: Throwable) {
                 MaterialDialog.Builder(this@ForgotActivity)
                     .theme(Theme.LIGHT)
@@ -58,7 +58,7 @@ class ForgotActivity : AppCompatActivity() {
 
             override fun onResponse(call: Call<Void>, response: Response<Void>) {
 
-                if(response.code() == 204 ){
+                if (response.code() == 204) {
                     //sucesso, enviou a senha por email
                     MaterialDialog.Builder(this@ForgotActivity)
                         .theme(Theme.LIGHT)
@@ -72,7 +72,7 @@ class ForgotActivity : AppCompatActivity() {
                         }.show()
 
 
-                }else if(response.code() == 404 ){
+                } else if (response.code() == 404) {
                     //Usuario não existe
                     MaterialDialog.Builder(this@ForgotActivity)
                         .theme(Theme.LIGHT)

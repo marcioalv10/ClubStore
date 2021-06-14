@@ -35,13 +35,13 @@ class RegisterActivity : AppCompatActivity() {
         register.setOnClickListener {
 
 
-            if(email.text.toString().isNotEmpty()
+            if (email.text.toString().isNotEmpty()
                 && name.text.toString().isNotEmpty()
                 && password.text.toString().isNotEmpty()
-            ){
-                if(check.isChecked){
+            ) {
+                if (check.isChecked) {
                     createAccount()
-                }else{
+                } else {
                     MaterialDialog.Builder(this@RegisterActivity)
                         .theme(Theme.LIGHT)
                         .title(R.string.message_ops)
@@ -50,7 +50,7 @@ class RegisterActivity : AppCompatActivity() {
                 }
 
 
-            }else{
+            } else {
                 MaterialDialog.Builder(this@RegisterActivity)
                     .theme(Theme.LIGHT)
                     .title(R.string.message_ops)
@@ -62,8 +62,9 @@ class RegisterActivity : AppCompatActivity() {
         }
 
     }
+
     //metodo para cadastrar o usuário
-    fun createAccount(){
+    fun createAccount() {
 
         //var name = findViewById<EditText>(R.id.name)
         //var password = findViewById<EditText>(R.id.password)
@@ -77,7 +78,7 @@ class RegisterActivity : AppCompatActivity() {
         var s = RetrofitInitializer().serviceAccount()
         var call = s.create(account)
 
-        call.enqueue(object : retrofit2.Callback<Account>{
+        call.enqueue(object : retrofit2.Callback<Account> {
             override fun onFailure(call: Call<Account>, t: Throwable) {
 
                 MaterialDialog.Builder(this@RegisterActivity)
@@ -92,7 +93,7 @@ class RegisterActivity : AppCompatActivity() {
             override fun onResponse(call: Call<Account>, response: Response<Account>) {
 
 
-                if(response.code() == 200){
+                if (response.code() == 200) {
                     MaterialDialog.Builder(this@RegisterActivity)
                         .theme(Theme.LIGHT)
                         .title(R.string.sucess)
@@ -104,7 +105,7 @@ class RegisterActivity : AppCompatActivity() {
                             startActivity(intent)
                             finish()
                         }.show()
-                }else if(response.code() == 409){
+                } else if (response.code() == 409) {
                     MaterialDialog.Builder(this@RegisterActivity)
                         .theme(Theme.LIGHT)
                         .title(R.string.message_ops)
@@ -118,8 +119,6 @@ class RegisterActivity : AppCompatActivity() {
                 }
 
 
-
-
             }
 
         })
@@ -128,7 +127,7 @@ class RegisterActivity : AppCompatActivity() {
     }
 
     //metodo direciona para a tela de redefinição se senha
-    fun showforgot(){
+    fun showforgot() {
         var intent = Intent(this, ForgotActivity::class.java)
         intent.putExtra("email", email.text.toString())
         startActivity(intent)

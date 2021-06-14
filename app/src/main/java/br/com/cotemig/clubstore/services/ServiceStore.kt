@@ -6,6 +6,6 @@ import retrofit2.http.GET
 
 interface ServiceStore {
 
-    @GET("e1d39c36-4574-4267-9a2b-86f45614c7c7")
+    @GET("514668fc-08a7-49e4-b07b-57dc392af692")
     fun getStores(): Call<List<Store>>
 }

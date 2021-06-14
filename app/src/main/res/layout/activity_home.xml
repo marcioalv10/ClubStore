@@ -6,6 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".ui.activities.HomeActivity">
 
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/logomarcaclubstore"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+       android:layout_marginLeft="20dp"
+
+        />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -20,10 +30,10 @@
         android:id="@+id/name_user"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
+        android:text="Nome"
         android:textColor="@color/dark_white"
         android:textSize="32sp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="50dp"
         android:layout_centerHorizontal="true"
         />
 

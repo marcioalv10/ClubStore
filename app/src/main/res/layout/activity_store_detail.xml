@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.StoreDetailActivity">
+
+    <ImageView
+        android:id="@+id/imageStoreDetail"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:scaleType="centerCrop"
+
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/background_gradiente"
+        />
+    <View
+        android:layout_alignBottom="@id/imageStoreDetail"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:background="@drawable/background_gradiente_bottom"
+        />
+    
+    <TextView
+        android:id="@+id/nameDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp"
+        android:text="Nome da Loja"
+        android:textColor="@color/dark_white"
+        android:textSize="20sp"
+        />
+    <TextView
+        android:id="@+id/endereco"
+        android:text="Endereço da loja"
+        android:textColor="@color/dark_white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="11sp"
+        android:layout_alignBottom="@id/imageStoreDetail"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="7dp"
+        />
+
+        <ImageView
+            android:id="@+id/logo_detail"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/imageStoreDetail"
+            android:layout_marginTop="-37dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/backgorund_logomarca"
+            />
+
+    //Exibe a lista de produtos através do RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/lista_produtos"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo_detail"
+        android:layout_marginTop="7dp"
+
+        />
+
+
+
+
+</RelativeLayout>

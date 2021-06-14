@@ -7,8 +7,17 @@
     android:orientation="vertical"
     tools:context=".ui.activities.LoginActivity">
 
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/logomarcaclubstore"
+        android:layout_gravity="center"
+        android:layout_marginTop="75dp"
+        android:layout_marginRight="15dp"
 
-    <TextView
+        />
+
+  <!--  <TextView
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="75dp"
@@ -32,7 +41,7 @@
         android:text="Store"
         android:textAlignment="center"
         android:textColor="@color/blue_logo"
-        android:textSize="42sp" />
+        android:textSize="42sp" />-->
 
     <EditText
         android:id="@+id/email"

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="20dp"
+    android:background="@drawable/background_atore"
+    android:layout_marginBottom="14dp"
+    android:layout_marginTop="3dp"
+    >
+
+    <TextView
+        android:id="@+id/nameProduto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/dark_white"
+        android:text="Nome do Produto"
+        android:textSize="14sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        />
+
+    <ImageView
+        android:id="@+id/imageProduto"
+        android:layout_width="164dp"
+        android:layout_height="82dp"
+        android:scaleType="centerCrop"
+        android:layout_below="@id/nameProduto"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        />
+    <TextView
+        android:id="@+id/preco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imageProduto"
+        android:text="88812.50"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/dark_white"
+
+        android:textSize="18sp"
+        android:layout_marginRight="15dp"
+        android:textAlignment="textEnd"
+        android:layout_centerVertical="true"
+
+/>
+
+    <Button
+        android:id="@+id/add_produto"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+       android:text="Comprar"
+        android:textSize="10sp"
+       android:background="@drawable/button_gradiente"
+        android:layout_alignBottom="@id/imageProduto"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+
+        />
+
+
+
+
+</RelativeLayout>

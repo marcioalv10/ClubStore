@@ -2,11 +2,22 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginHorizontal="30dp"
+    android:layout_marginHorizontal="20dp"
     android:layout_marginBottom="17dp"
     android:id="@+id/content_item_store"
+    android:layout_marginTop="7dp"
     android:clickable="true"
     android:background="@drawable/background_atore">
+
+    <ImageView
+        android:id="@+id/image_logo"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/backgorund_logomarca"
+
+        />
 
     <TextView
         android:id="@+id/name_store"
@@ -16,6 +27,7 @@
         android:layout_marginTop="10dp"
         android:text="Lojas Americanas"
         android:textColor="@color/dark_white"
+        android:layout_toRightOf="@id/image_logo"
         android:textSize="17sp" />
 
     <TextView
@@ -26,6 +38,7 @@
         android:layout_marginLeft="20dp"
         android:text="Loja de roupas e itens de moda"
         android:textColor="@color/dark_white"
+        android:layout_toRightOf="@id/image_logo"
 
         />
 

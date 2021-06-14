@@ -13,15 +13,18 @@
         android:theme="@style/Theme.ClubStore">
         <activity android:name=".ui.activities.StoreDetailActivity"></activity>
         <activity android:name=".ui.activities.HomeActivity">
+
+        </activity>
+        <activity android:name=".ui.activities.ForgotActivity" />
+        <activity android:name=".ui.activities.RegisterActivity" />
+        <activity android:name=".ui.activities.LoginActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
-        <activity android:name=".ui.activities.ForgotActivity" />
-        <activity android:name=".ui.activities.RegisterActivity" />
-        <activity android:name=".ui.activities.LoginActivity"></activity>
     </application>
 
 </manifest>

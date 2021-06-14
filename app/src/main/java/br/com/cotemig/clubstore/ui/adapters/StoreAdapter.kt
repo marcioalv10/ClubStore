@@ -1,6 +1,7 @@
 package br.com.cotemig.clubstore.ui.adapters
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,10 +9,14 @@ import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
 import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import br.com.cotemig.clubstore.R
 import br.com.cotemig.clubstore.model.Store
+import br.com.cotemig.clubstore.ui.activities.StoreDetailActivity
 import coil.load
+import coil.transform.RoundedCornersTransformation
+import java.io.Serializable
 
 class StoreAdapter (var context: Context, var list: List<Store>):
                 RecyclerView.Adapter<RecyclerView.ViewHolder>() {
@@ -48,7 +53,32 @@ class StoreAdapter (var context: Context, var list: List<Store>):
             var content = view.findViewById<RelativeLayout>(R.id.content_item_store)
             content.setOnClickListener {
                 Toast.makeText(context, "Clicou ".plus(store.nome), Toast.LENGTH_LONG).show()
+
+                //Abrindo a activity Detail Store
+                var intent = Intent(context, StoreDetailActivity::class.java)
+                intent.putExtra("store", store)
+
+
+
+             /*  intent.putExtra("nomeLoja", store.nome)
+                intent.putExtra("localLoja", store.localizacao)
+                intent.putExtra("imageLoja", store.tipo)
+                intent.putExtra("descLoja", store.descricao)
+                intent.putExtra("produtosLoja", store.produtos.toString())*/
+
+
+
+                context.startActivity(intent)
+
             }
+
+
+
+
+            /* var produto = view.findViewById<RecyclerView>(R.id.lista_produtos)
+            produto.adapter = ProductAdapter(context, store.produtos)
+            produto.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)*/
+
 
 
             var name_store = view.findViewById<TextView>(R.id.name_store)
@@ -61,16 +91,32 @@ class StoreAdapter (var context: Context, var list: List<Store>):
             localizacao_store.text = store.localizacao
 
             var image_cat = view.findViewById<ImageView>(R.id.image_category)
+            var categoria : String
 
-            if(store.tipo.equals("Sorveteria")){
-                store.tipo = "https://mockup.fluo.app/assets/fatura/alimentacao.png"
-            }else if(store.tipo.equals("Oficina")){
-                store.tipo = "https://mockup.fluo.app/assets/fatura/servicos.png"
-            }else{
-                store.tipo = "https://mockup.fluo.app/assets/fatura/outros.png"
+            var foto = view.findViewById<ImageView>(R.id.imageStore)
+            foto.load(store.foto){
+                transformations(RoundedCornersTransformation(15f))
             }
 
-            image_cat.load(store.tipo)
+            var logo = view.findViewById<ImageView>(R.id.image_logo)
+            logo.load(store.logo){
+                transformations(RoundedCornersTransformation(50f))
+            }
+
+
+
+
+            if(store.tipo.equals("Alimentacao")){
+                categoria = "https://mockup.fluo.app/assets/fatura/alimentacao.png"
+            }else if(store.tipo.equals("Oficina")){
+                categoria = "https://mockup.fluo.app/assets/fatura/servicos.png"
+            }else if(store.tipo.equals("Educacao")){
+                categoria = "https://mockup.fluo.app/assets/fatura/educacao.png"
+            }else{
+                categoria = "https://mockup.fluo.app/assets/fatura/outros.png"
+            }
+
+            image_cat.load(categoria)
 
         }
 

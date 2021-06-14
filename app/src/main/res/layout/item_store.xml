@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="30dp"
+    android:layout_marginBottom="17dp"
+    android:id="@+id/content_item_store"
+    android:clickable="true"
+    android:background="@drawable/background_atore">
+
+    <TextView
+        android:id="@+id/name_store"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Lojas Americanas"
+        android:textColor="@color/dark_white"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name_store"
+        android:layout_marginLeft="20dp"
+        android:text="Loja de roupas e itens de moda"
+        android:textColor="@color/dark_white"
+
+        />
+
+    <ImageView
+        android:id="@+id/imageStore"
+        android:layout_width="match_parent"
+        android:layout_height="164dp"
+        android:layout_below="@+id/description"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="70dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/tobias_tweet_image" />
+
+    <ImageView
+        android:id="@+id/image_category"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/description"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+
+
+
+        />
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageStore"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:text="Cid. industrial, contagem"
+        android:textColor="@color/dark_white" />
+
+
+</RelativeLayout>
